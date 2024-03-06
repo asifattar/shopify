@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <ul class="list-group text-center">
+                <li
+                 class="list-group-item" *ngFor="let prod of products"
+                 [routerLink]="['/products',prod.id]"
+                 [ngClass]="{active : prod.id === selctedProd}"
+                 (click)="selctedProd = prod.id"
+                 [queryParams]="{ canEdit : prod.canReturn}"
+                 >
+                    {{prod.name}}
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-8">
+            <router-outlet></router-outlet>
+            <!-- <app-product></app-product> -->
+        </div>
+    </div>
+</div>

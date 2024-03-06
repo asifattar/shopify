@@ -1,0 +1,27 @@
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 offset-md-4">
+         <div class="login-container">
+            <div class="login_box text-center">
+                <h2>create account</h2>
+            </div>
+            <form action="">
+                <div class="field">
+                    <label for="email">Email Address</label>
+                    <input type="email" [(ngModel)]="email" id="email" name="email" required>
+                </div>
+                <div class="field">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" [(ngModel)]="password" name="password" required>
+                </div>
+                <div class="text-center">
+                <button type="submit" (click)="craeteAccount()" class="btn btn-outline-success">Sign in</button>
+
+                </div>
+            </form>
+         </div>
+        </div>
+    </div>
+</div>
